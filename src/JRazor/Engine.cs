@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace JRazor
 {
-    public class JRazor
+    public class Engine
     {
     }
 }
