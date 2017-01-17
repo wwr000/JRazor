@@ -1,14 +1,15 @@
 ﻿using System.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace JRazor
 {
-    public abstract class Template
+    public abstract class JRazorTemplate
     {
         private StringBuilder buffer;
 
-        protected Template()
+        protected JRazorTemplate()
         {
             Model = new ExpandoObject();
             buffer = new StringBuilder();
@@ -16,11 +17,19 @@ namespace JRazor
 
         public dynamic Model { get; set; }
 
-        public abstract Task Execute();
+        public string Result
+        {
+            get
+            {
+                return buffer.ToString();
+            }
+        }
+
+        public abstract Task ExecuteAsync();
 
         public virtual void Write(object value)
         {
-            WriteLiteral(value);
+            buffer.Append(value);
         }
 
         public virtual void WriteLiteral(object value)
@@ -28,10 +37,8 @@ namespace JRazor
             buffer.Append(value);
         }
 
-        public string GetContent()
-        {            
-            Execute();
-
+        public override string ToString()
+        {
             return buffer.ToString();
         }
     }
