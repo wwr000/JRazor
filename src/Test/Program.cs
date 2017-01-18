@@ -17,12 +17,15 @@ namespace Test
             {
                 Name = "John Doe",
                 Title = "RazorLight",
+                Lst2 = 23,
                 Lst = new string[] { "aaa", "bbb", "ccc" }
             };
 
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(model);
 
             var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Dynamic.ExpandoObject>(json);
+
+            
 
             var aaaa = JRazorEngine.Parse(str, jsonObj);
 

@@ -21,7 +21,7 @@ namespace JRazor
             var assemblyName = Path.GetRandomFileName();
 
             var sourceText = SourceText.From(compilationContent, Encoding.UTF8);
-            var syntaxTree = CSharpSyntaxTree.ParseText(sourceText, path: assemblyName, options: new CSharpParseOptions());
+            var syntaxTree = CSharpSyntaxTree.ParseText(sourceText, path: assemblyName, options: new CSharpParseOptions(LanguageVersion.CSharp6));
             var options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
 
             var compilation = CSharpCompilation.Create(assemblyName, options: options, syntaxTrees: new[] { syntaxTree }, references: references);

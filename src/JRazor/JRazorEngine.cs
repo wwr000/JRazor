@@ -19,8 +19,6 @@ namespace JRazor
 
             obj.ExecuteAsync().Wait();
 
-            
-
             return obj.Result;
         }
     }

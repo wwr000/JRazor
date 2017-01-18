@@ -18,9 +18,9 @@ namespace JRazor
         {
             var host = new RazorEngineHost(new CSharpRazorCodeLanguage(), () => new HtmlMarkupParser())
             {
-                DefaultBaseClass = "JRazorTemplate",
+                DefaultBaseClass = nameof(JRazorTemplate),
                 DefaultClassName = templateName,
-                DefaultNamespace = "JRazor"
+                DefaultNamespace = nameof(JRazor)
             };
             host.NamespaceImports.Add("System");
             host.NamespaceImports.Add("System.Dynamic");

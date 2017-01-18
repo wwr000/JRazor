@@ -25,7 +25,10 @@ namespace JRazor
             }
         }
 
-        public abstract Task ExecuteAsync();
+        public virtual Task ExecuteAsync()
+        {
+            return Task.FromResult(0);
+        }
 
         public virtual void Write(object value)
         {
