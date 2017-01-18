@@ -58,30 +58,30 @@ namespace JRazor
 
 
 
-            metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\mscorlib.dll"));
-            //metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Private.CoreLib.ni.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\Source\Repos\JRazor\src\Test\bin\Debug\netcoreapp1.1\Test.dll"));
-            metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.InteropServices.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Diagnostics.Debug.dll"));
-            //metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Dynamic.Runtime.dll"));
-            metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Threading.Tasks.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\.nuget\packages\Microsoft.AspNetCore.Razor\1.1.0\lib\netstandard1.3\Microsoft.AspNetCore.Razor.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CodeAnalysis.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Reflection.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Collections.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CodeAnalysis.CSharp.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Collections.Immutable.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.IO.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.IO.FileSystem.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Console.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\.nuget\packages\Newtonsoft.Json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Text.Encoding.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.Extensions.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.Loader.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Linq.dll"));
-            //metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CSharp.dll"));
-            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Reflection.Metadata.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\mscorlib.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Private.CoreLib.ni.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\Source\Repos\JRazor\src\Test\bin\Debug\netcoreapp1.1\Test.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.InteropServices.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Diagnostics.Debug.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Dynamic.Runtime.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Threading.Tasks.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\.nuget\packages\Microsoft.AspNetCore.Razor\1.1.0\lib\netstandard1.3\Microsoft.AspNetCore.Razor.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CodeAnalysis.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Reflection.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Collections.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CodeAnalysis.CSharp.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Collections.Immutable.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.IO.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.IO.FileSystem.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Console.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Users\wwr\.nuget\packages\Newtonsoft.Json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Text.Encoding.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.Extensions.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Runtime.Loader.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Linq.dll"));
+            ////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\Microsoft.CSharp.dll"));
+            //////metadataReferences.Add(MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\1.1.0\System.Reflection.Metadata.dll"));
 
             var libPath = Path.GetDirectoryName(typeof(object).GetTypeInfo().Assembly.Location);
 
