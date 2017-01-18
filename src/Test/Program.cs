@@ -27,9 +27,9 @@ namespace Test
 
             var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<JRazorExpandoObject>(json);
 
-            var aaaa = JRazorEngine.Parse(template, jsonObj);
+            var str = JRazorEngine.Parse(template, jsonObj);
 
-            Console.Write(aaaa);
+            Console.Write(str);
 
             Console.ReadKey();
         }
