@@ -7,7 +7,7 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            var str = @"Hello @Model.Name Welcome to  repository
+            var template = @"Hello @Model.undefine Welcome to  repository
                         @foreach(string s in Model.Lst)
                         {
                             @s
@@ -17,17 +17,17 @@ namespace Test
             {
                 Name = "John Doe",
                 Title = "RazorLight",
-                Lst2 = 23,
+                Age = 23,
                 Lst = new string[] { "aaa", "bbb", "ccc" }
             };
 
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(model);
 
-            var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Dynamic.ExpandoObject>(json);
+            //var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Dynamic.ExpandoObject>(json);
 
-            
+            var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<JRazorExpandoObject>(json);
 
-            var aaaa = JRazorEngine.Parse(str, jsonObj);
+            var aaaa = JRazorEngine.Parse(template, jsonObj);
 
             Console.Write(aaaa);
 
