@@ -31,7 +31,7 @@ namespace Test
 
             Console.Write(str);
 
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
     }
 }
