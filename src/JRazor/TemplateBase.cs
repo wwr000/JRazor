@@ -5,11 +5,11 @@ using Microsoft.CSharp.RuntimeBinder;
 
 namespace JRazor
 {
-    public abstract class RazorTemplate
+    public abstract class TemplateBase
     {
         private StringBuilder buffer;
 
-        protected RazorTemplate()
+        protected TemplateBase()
         {
             Model = new System.Dynamic.ExpandoObject();
             buffer = new StringBuilder();
@@ -28,6 +28,21 @@ namespace JRazor
         public virtual Task ExecuteAsync()
         {
             return Task.FromResult(0);
+        }
+
+        public virtual void BeginWriteAttribute(object value)
+        {
+            buffer.Append(value);
+        }
+
+        public virtual void WriteAttributeValue(object value)
+        {
+            buffer.Append(value);
+        }
+
+        public virtual void EndWriteAttribute(object value)
+        {
+            buffer.Append(value);
         }
 
         public virtual void Write(object value)

@@ -26,7 +26,7 @@ namespace JRazor
             if (!compileResult.Success)
                 throw new Exception(string.Join("\r\n", compileResult.Errors));
 
-            var obj = (RazorTemplate)Activator.CreateInstance(compileResult.TemplateType);
+            var obj = (TemplateBase)Activator.CreateInstance(compileResult.TemplateType);
 
             obj.Model = model;
 

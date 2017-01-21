@@ -98,7 +98,7 @@ namespace JRazor
             metadataReferences.Add(MetadataReference.CreateFromFile(Path.Combine(libPath, "System.Collections.Immutable.dll")));
 
             metadataReferences.Add(MetadataReference.CreateFromFile(typeof(object).GetTypeInfo().Assembly.Location));
-            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(RazorTemplate).GetTypeInfo().Assembly.Location));
+            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(TemplateBase).GetTypeInfo().Assembly.Location));
 
             return metadataReferences;
         }

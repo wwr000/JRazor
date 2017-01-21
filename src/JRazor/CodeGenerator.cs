@@ -16,9 +16,9 @@ namespace JRazor
 
         public GeneratorResults Generate(string template)
         {
-            var host = new RazorEngineHost(new CSharpRazorCodeLanguage(), () => new HtmlMarkupParser())
+            var host = new RazorEngineHost(new CSharpRazorCodeLanguage())
             {
-                DefaultBaseClass = nameof(RazorTemplate),
+                DefaultBaseClass = nameof(TemplateBase),
                 DefaultClassName = templateName,
                 DefaultNamespace = nameof(JRazor)
             };
