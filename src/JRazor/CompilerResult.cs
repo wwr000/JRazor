@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace JRazor
 {
-    public class CompileResult
+    public class CompilerResult
     {
         public bool Success { set; get; } = false;
 

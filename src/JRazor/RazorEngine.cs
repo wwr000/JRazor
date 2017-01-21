@@ -7,20 +7,26 @@ namespace JRazor
     {
         public static string Parse(string template, dynamic model)
         {
+            if(string.IsNullOrWhiteSpace(template))
+                throw new Exception("template is null");
+
+            if(model == null)
+                throw new Exception("template is null");
+
             var generator = new CodeGenerator("c" + Guid.NewGuid().ToString("N"));
             var compiler = new Compiler();
 
             var generatorResult = generator.Generate(template);
 
             if (!generatorResult.Success)
-                throw new Exception(string.Join(",", generatorResult.ParserErrors.Select(x => x.Message).ToArray()));
+                throw new Exception(string.Join("\r\n", generatorResult.ParserErrors.Select(x => x.Message).ToArray()));
 
             var compileResult = compiler.Compile(generatorResult.GeneratedCode);
 
             if (!compileResult.Success)
-                throw new Exception(string.Join(",", compileResult.Errors));
+                throw new Exception(string.Join("\r\n", compileResult.Errors));
 
-            var obj = (Template)Activator.CreateInstance(compileResult.TemplateType);
+            var obj = (RazorTemplate)Activator.CreateInstance(compileResult.TemplateType);
 
             obj.Model = model;
 

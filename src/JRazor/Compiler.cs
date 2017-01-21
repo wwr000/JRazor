@@ -16,9 +16,9 @@ namespace JRazor
     {
         private static List<MetadataReference> references = GetApplicationReferences();
 
-        public CompileResult Compile(string compilationContent)
+        public CompilerResult Compile(string compilationContent)
         {
-            var compileResult = new CompileResult();
+            var compileResult = new CompilerResult();
             var assemblyName = Path.GetRandomFileName();
 
             var sourceText = SourceText.From(compilationContent, Encoding.UTF8);
@@ -98,7 +98,7 @@ namespace JRazor
             metadataReferences.Add(MetadataReference.CreateFromFile(Path.Combine(libPath, "System.Collections.Immutable.dll")));
 
             metadataReferences.Add(MetadataReference.CreateFromFile(typeof(object).GetTypeInfo().Assembly.Location));
-            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(Template).GetTypeInfo().Assembly.Location));
+            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(RazorTemplate).GetTypeInfo().Assembly.Location));
 
             return metadataReferences;
         }
