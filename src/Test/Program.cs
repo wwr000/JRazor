@@ -25,9 +25,9 @@ namespace Test
 
             //var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<System.Dynamic.ExpandoObject>(json);
 
-            var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<JRazorExpandoObject>(json);
+            var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<ExpandoObject>(json);
 
-            var str = JRazorEngine.Parse(template, jsonObj);
+            var str = RazorEngine.Parse(template, jsonObj);
 
             Console.Write(str);
 

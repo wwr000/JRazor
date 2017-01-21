@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace JRazor
 {
-    public class JRazorExpandoObject : DynamicObject
+    public class ExpandoObject : DynamicObject
     {
         private Dictionary<string, object> _properties = new Dictionary<string, object>();
         public override bool TryGetMember(GetMemberBinder binder, out object result)

@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Razor.Parser.Internal;
 
 namespace JRazor
 {
-    public class JRazorCodeGenerator
+    public class CodeGenerator
     {
         string templateName = string.Empty;
 
-        public JRazorCodeGenerator(string templateName)
+        public CodeGenerator(string templateName)
         {
             this.templateName = templateName;
         }
@@ -18,7 +18,7 @@ namespace JRazor
         {
             var host = new RazorEngineHost(new CSharpRazorCodeLanguage(), () => new HtmlMarkupParser())
             {
-                DefaultBaseClass = nameof(JRazorTemplate),
+                DefaultBaseClass = nameof(Template),
                 DefaultClassName = templateName,
                 DefaultNamespace = nameof(JRazor)
             };

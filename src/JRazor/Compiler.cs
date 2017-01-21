@@ -12,12 +12,13 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace JRazor
 {
-    public class JRazorCompiler
+    public class Compiler
     {
         private static List<MetadataReference> references = GetApplicationReferences();
 
-        public Type Compile(string compilationContent)
+        public CompileResult Compile(string compilationContent)
         {
+            var compileResult = new CompileResult();
             var assemblyName = Path.GetRandomFileName();
 
             var sourceText = SourceText.From(compilationContent, Encoding.UTF8);
@@ -36,10 +37,10 @@ namespace JRazor
 
                     foreach (Diagnostic diagnostic in failures)
                     {
-                        Console.Error.WriteLine("{0}: {1}", diagnostic.Id, diagnostic.GetMessage());
+                        compileResult.Errors.Add($"{diagnostic.Id}:{diagnostic.GetMessage()}");
                     }
 
-                    return null;
+                    return compileResult;
                 }
 
                 assemblyStream.Seek(0, SeekOrigin.Begin); ;
@@ -48,7 +49,10 @@ namespace JRazor
 
                 var templateType = assembly.GetTypes()[0];
 
-                return templateType;
+                compileResult.Success = true;
+                compileResult.TemplateType = templateType;
+
+                return compileResult;
             }
         }
 
@@ -94,7 +98,7 @@ namespace JRazor
             metadataReferences.Add(MetadataReference.CreateFromFile(Path.Combine(libPath, "System.Collections.Immutable.dll")));
 
             metadataReferences.Add(MetadataReference.CreateFromFile(typeof(object).GetTypeInfo().Assembly.Location));
-            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(JRazorTemplate).GetTypeInfo().Assembly.Location));
+            metadataReferences.Add(MetadataReference.CreateFromFile(typeof(Template).GetTypeInfo().Assembly.Location));
 
             return metadataReferences;
         }

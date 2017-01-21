@@ -5,13 +5,13 @@ using Microsoft.CSharp.RuntimeBinder;
 
 namespace JRazor
 {
-    public abstract class JRazorTemplate
+    public abstract class Template
     {
         private StringBuilder buffer;
 
-        protected JRazorTemplate()
+        protected Template()
         {
-            Model = new ExpandoObject();
+            Model = new System.Dynamic.ExpandoObject();
             buffer = new StringBuilder();
         }
 
