@@ -11,7 +11,7 @@ namespace Test
             var template = @"Hello @Model.Name1 Welcome to  repository
                         @foreach(string s in Model.Lst)
                         {
-                            <a href=""@s"">@s</a>
+                            <a href=""@s"">@Html.Raw(s)</a>
                         }";
 
             var model = new

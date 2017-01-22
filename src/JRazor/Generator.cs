@@ -20,7 +20,8 @@ namespace JRazor
             {
                 DefaultBaseClass = nameof(templet),
                 DefaultClassName = "c" + Guid.NewGuid().ToString("N"),
-                DefaultNamespace = nameof(JRazor)
+                DefaultNamespace = nameof(JRazor),
+                GeneratedClassContext = new Microsoft.AspNetCore.Razor.CodeGenerators.GeneratedClassContext("ExecuteAsync", "Write", "WriteLiteral", new Microsoft.AspNetCore.Razor.CodeGenerators.GeneratedTagHelperContext())
             };
             host.NamespaceImports.Add("System");
             host.NamespaceImports.Add("System.Dynamic");

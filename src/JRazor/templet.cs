@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Text;
-using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
 namespace JRazor
@@ -63,7 +62,7 @@ namespace JRazor
 
         protected void WriteTo(string value)
         {
-            WriteLiteralTo(HtmlEncoder.Default.Encode(value));
+            WriteLiteralTo(value);
         }
 
         protected void WriteLiteralTo(object value)
