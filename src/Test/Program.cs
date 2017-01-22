@@ -1,5 +1,6 @@
-﻿using System;
-using JRazor;
+﻿using JRazor;
+using System;
+using System.Dynamic;
 
 namespace Test
 {
@@ -7,10 +8,10 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            var template = @"Hello @Model.undefine Welcome to  repository
+            var template = @"Hello @Model.Name1 Welcome to  repository
                         @foreach(string s in Model.Lst)
                         {
-                            @s
+                            <a href=""@s"">@s</a>
                         }";
 
             var model = new
@@ -27,7 +28,9 @@ namespace Test
 
             var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<ExpandoObject>(json);
 
-            var str = RazorEngine.Parse(template, jsonObj);
+            
+
+            var str = Engine.Parse(template, jsonObj);
 
             Console.Write(str);
 

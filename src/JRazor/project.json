@@ -11,6 +11,7 @@
     "System.Dynamic.Runtime": "4.3.0",
     "System.Runtime": "4.3.0",
     "System.Runtime.Loader": "4.3.0",
+    "System.Text.Encodings.Web": "4.0.0",
     "System.Threading.Tasks": "4.3.0"
   },
 
