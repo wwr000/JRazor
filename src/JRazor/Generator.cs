@@ -18,7 +18,7 @@ namespace JRazor
 
             var host = new RazorEngineHost(new CSharpRazorCodeLanguage())
             {
-                DefaultBaseClass = nameof(templet),
+                DefaultBaseClass = nameof(Templet),
                 DefaultClassName = "c" + Guid.NewGuid().ToString("N"),
                 DefaultNamespace = nameof(JRazor),
                 GeneratedClassContext = new Microsoft.AspNetCore.Razor.CodeGenerators.GeneratedClassContext("ExecuteAsync", "Write", "WriteLiteral", new Microsoft.AspNetCore.Razor.CodeGenerators.GeneratedTagHelperContext())

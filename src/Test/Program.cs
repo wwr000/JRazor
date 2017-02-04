@@ -8,10 +8,10 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            var template = @"Hello @Model.Name1 Welcome to  repository
+            var template = @"Hello @Model.Name Welcome to  repository
                         @foreach(string s in Model.Lst)
                         {
-                            <a href=""@s"">@Html.Raw(s)</a>
+                            <a href=""@s"">@s</a>
                         }";
 
             var model = new

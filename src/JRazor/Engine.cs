@@ -21,7 +21,7 @@ namespace JRazor
 
             var templateType = new Compiler().Compile(templateCode);
 
-            var obj = (templet)Activator.CreateInstance(templateType);
+            var obj = (Templet)Activator.CreateInstance(templateType);
 
             obj.Model = model;
            
