@@ -13,11 +13,19 @@ namespace JRazor
 
         protected Templet()
         {
-            Model = new System.Dynamic.ExpandoObject();
             buffer = new StringBuilder();
         }
 
-        public dynamic Model { get; set; }
+        public dynamic json
+        {
+            get { return Json; }
+        }
+
+        public dynamic Json
+        {
+            get;
+            set;
+        }
 
         public string Result
         {
@@ -89,6 +97,7 @@ namespace JRazor
         }
 
         private List<string> AttributeValues { get; set; }
+ 
 
         protected void WriteAttributeValue(string thingy, int startPostion, object value, int endValue, int dealyo, bool yesno)
         {

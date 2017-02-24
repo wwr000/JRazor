@@ -8,9 +8,9 @@ namespace Test
     {
         public static void Main(string[] args)
         {
-            var template = @"<h1>Hello @Model.Name Welcome to  repository</h1>
+            var template = @"<h1>Hello @json.name Welcome to  repository</h1>
                             <ul>
-                            @foreach(var s in Model.Color)
+                            @foreach(var s in json.color)
                             {
                                 <li>
                                     <a href=""@s"">@s</a>
@@ -18,20 +18,16 @@ namespace Test
                             }
                             </ul>";
 
-            var model = new
-            {
-                Name    =   "John Doe",
-                Age     =   23,
-                Color   =   new string[] { "red", "yellow", "blue" }
-            };
 
-            //var str = Engine.Parse(template, model);
+            var json = @"{
+                            ""name"":""John Doe"",
+                            ""age"":""23"",
+                            ""color"":[""red"",""yellow"",""blue""]
+                         }";
 
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(model);
-
-            var jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<ExpandoObject>(json);
+            var model = Newtonsoft.Json.JsonConvert.DeserializeObject<ExpandoObject>(json);
             
-            var str = Engine.Parse(template, jsonObj);
+            var str = Engine.Parse(template, model);
 
             Console.Write(str);
 
